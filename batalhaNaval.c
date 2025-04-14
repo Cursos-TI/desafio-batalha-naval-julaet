@@ -39,10 +39,15 @@ int main() {
     tabuleiro[7][5] = 3;
     tabuleiro[8][6] = 3;
 
+    //navio 4
+    tabuleiro[0][5] = 3;
+    tabuleiro[1][4] = 3;
+    tabuleiro[2][3] = 3;
+
     //cabecalho do jogo
     printf("------------TABULEIRO DA BATALHA NAVAL-------------\n");
     //nomeando as colunas
-    printf("    A   B   C   D   E   F   G   H   I   J\n");
+    printf("     A   B   C   D   E   F   G   H   I   J\n");
 
     for (i = 0; i < LINHAS; i++)
     {
