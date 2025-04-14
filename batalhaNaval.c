@@ -1,18 +1,22 @@
 #include <stdio.h>
 
+//declarar e definir as constantes de linhas e colunas da matriz
+#define LINHAS 10
+#define COLUNAS 10
+
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
 
-    int tabuleiro[10][10];
+    int tabuleiro[LINHAS][COLUNAS];
     int i, j;
 
     //montando a matriz com zeros
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < LINHAS; i++)
     {
-        for (j = 0; j < 10; j++)
+        for (j = 0; j < COLUNAS; j++)
         {
             tabuleiro[i][j] = 0;
         };
@@ -29,12 +33,18 @@ int main() {
     tabuleiro[2][6] = 3;
     tabuleiro[2][7] = 3;
 
+    //posicionando mais dois navios na diagonal:
+    //navio 3
+    tabuleiro[6][4] = 3;
+    tabuleiro[7][5] = 3;
+    tabuleiro[8][6] = 3;
+
     //cabecalho do jogo
     printf("------------TABULEIRO DA BATALHA NAVAL-------------\n");
     //nomeando as colunas
     printf("    A   B   C   D   E   F   G   H   I   J\n");
 
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < LINHAS; i++)
     {
         if (i < 9)
         {
@@ -44,7 +54,7 @@ int main() {
         {
             printf("%d  ", i + 1);
         }
-        for (j = 0; j < 10; j++)
+        for (j = 0; j < COLUNAS; j++)
         {
             printf(" %d  ", tabuleiro[i][j]); //imprime o valor atribuido
         };
@@ -55,6 +65,7 @@ int main() {
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
     // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
